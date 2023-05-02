@@ -9,7 +9,9 @@ const app = express();
 const PORT = 8000 || 3030;
 app.use(express.json());
 
-//MIDDLEWARES
+app.use("/", (req, res) => {
+  res.status(200).send("HOME PAGE");
+});
 
 //ROUTES
 app.use("/user", userRotute);
